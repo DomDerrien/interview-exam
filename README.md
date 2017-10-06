@@ -149,21 +149,25 @@ The smallest area is composed of four adjacent triangles for a total of two unit
 
 # Solution implementation
 
-The solution can be exercized by opening the [index.html](/index.html) file in Chrome, Opera, or Safari.
+The solution can be exercized by opening the [index.html](https://rawgit.com/DomDerrien/interview-exam/master/index.html) file in Chrome, Opera, or Safari.
 For now, only these browsers have implemented the EcmaScript 6 `import` statement.
 The level of support of other browsers can be checked on [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) website.
 
-The [index.html](/index.html) file contains the glue which renders the grid and the closed paths in the HTML page.
-The logic parsing the grid and identifying the closed paths is in the [Grid.js](/li/Grid.js) file.
+The [index.html](https://rawgit.com/DomDerrien/interview-exam/master/index.html) file contains the glue which renders the grid and the closed paths in the HTML page.
+The logic parsing the grid and identifying the closed paths is in the [Grid.js](/lib/Grid.js) file.
 
 By default, the page renders a random distribution in a grid 6x6.
 If you want different width and height, append the two numbers separated by an `x` after a `?`.
 For example: 
 
-- [index.html?2x2](/index.html?2x2), 
-- [index.html?3x9](/index.html?3x9),
-- [index.html?10x10](/index.html?10x10).
+- [index.html?2x2](https://rawgit.com/DomDerrien/interview-exam/master/index.html?2x2), 
+- [index.html?9x3](https://rawgit.com/DomDerrien/interview-exam/master/index.html?9x3),
+- [index.html?10x10](https://rawgit.com/DomDerrien/interview-exam/master/index.html?10x10).
 
-If you specify [0x0](/index.html?0x0), the grid illustrated in the documentation above is repeatedly processed--this is provided to facilitate the debugging ;)
+If you specify [0x0](https://rawgit.com/DomDerrien/interview-exam/master/index.html?0x0), the grid illustrated in the documentation above is repeatedly processed--this is provided to facilitate the debugging ;)
+
+# Acknowlegements
+
+Thank you to [@rawgit](https://twitter.com/rawgit) for offering anyone a [service](https://rawgit.com/) which serves raw file from GitHub with the right headers.
 
 Enjoy!
