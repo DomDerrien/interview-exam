@@ -1,0 +1,58 @@
+<svg width="260" height="180" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <!-- Grid horizontal lines -->
+        <line y2="10" x2="250" y1="10" x1="10" stroke-width="1.5" stroke="#ddd" />
+        <line y2="50" x2="250" y1="50" x1="10" stroke-width="1.5" stroke="#ddd" />
+        <line y2="90" x2="250" y1="90" x1="10" stroke-width="1.5" stroke="#ddd" />
+        <line y2="130" x2="250" y1="130" x1="10" stroke-width="1.5" stroke="#ddd" />
+        <line y2="170" x2="250" y1="170" x1="10" stroke-width="1.5" stroke="#ddd" />
+        <line y2="210" x2="10" y1="210" x1="10" stroke-width="1.5" stroke="#ddd" />
+        <!-- Grid vetical lines -->
+        <line y2="170" x2="10" y1="10" x1="10" stroke-width="1.5" stroke="#ddd" />
+        <line y2="170" x2="50" y1="10" x1="50" stroke-width="1.5" stroke="#ddd" />
+        <line y2="170" x2="90" y1="10" x1="90" stroke-width="1.5" stroke="#ddd" />
+        <line y2="170" x2="130" y1="10" x1="130" stroke-width="1.5" stroke="#ddd" />
+        <line y2="170" x2="170" y1="10" x1="170" stroke-width="1.5" stroke="#ddd" />
+        <line y2="170" x2="210" y1="10" x1="210" stroke-width="1.5" stroke="#ddd" />
+        <line y2="170" x2="250" y1="10" x1="250" stroke-width="1.5" stroke="#ddd" />
+        <!-- Cell content -->
+        <!-- on line 1: ><><>< -->
+        <line x1="10" y1="50" x2="50" y2="10" stroke-width="1.5" stroke="#000" />
+        <line x1="50" y1="10" x2="90" y2="50" stroke-width="1.5" stroke="#000" />
+        <line x1="90" y1="50" x2="130" y2="10" stroke-width="1.5" stroke="#000" />
+        <line x1="130" y1="10" x2="170" y2="50" stroke-width="1.5" stroke="#000" />
+        <line x1="170" y1="50" x2="210" y2="10" stroke-width="1.5" stroke="#000" />
+        <line x1="210" y1="10" x2="250" y2="50" stroke-width="1.5" stroke="#000" />
+        <!-- on line 2: <><<>> -->
+        <line x1="10" y1="50" x2="50" y2="90" stroke-width="1.5" stroke="#000" />
+        <line x1="50" y1="90" x2="90" y2="50" stroke-width="1.5" stroke="#000" />
+        <line x1="90" y1="50" x2="130" y2="90" stroke-width="1.5" stroke="#000" />
+        <line x1="130" y1="50" x2="170" y2="90" stroke-width="1.5" stroke="#000" />
+        <line x1="170" y1="90" x2="210" y2="50" stroke-width="1.5" stroke="#000" />
+        <line x1="210" y1="90" x2="250" y2="50" stroke-width="1.5" stroke="#000" />
+        <!-- on line 3: <<>>>< -->
+        <line x1="10" y1="90" x2="50" y2="130" stroke-width="1.5" stroke="#000" />
+        <line x1="50" y1="90" x2="90" y2="130" stroke-width="1.5" stroke="#000" />
+        <line x1="90" y1="130" x2="130" y2="90" stroke-width="1.5" stroke="#000" />
+        <line x1="130" y1="130" x2="170" y2="90" stroke-width="1.5" stroke="#000" />
+        <line x1="170" y1="130" x2="210" y2="90" stroke-width="1.5" stroke="#000" />
+        <line x1="210" y1="90" x2="250" y2="130" stroke-width="1.5" stroke="#000" />
+        <!-- on line 4: ><<>>< -->
+        <line x1="10" y1="170" x2="50" y2="130" stroke-width="1.5" stroke="#000" />
+        <line x1="50" y1="130" x2="90" y2="170" stroke-width="1.5" stroke="#000" />
+        <line x1="90" y1="130" x2="130" y2="170" stroke-width="1.5" stroke="#000" />
+        <line x1="130" y1="170" x2="170" y2="130" stroke-width="1.5" stroke="#000" />
+        <line x1="170" y1="170" x2="210" y2="130" stroke-width="1.5" stroke="#000" />
+        <line x1="210" y1="130" x2="250" y2="170" stroke-width="1.5" stroke="#000" />
+        <!-- Closed blocks fill-up -->
+        <rect transform="rotate(45 50,50) " height="52" width="52" y="24" x="24" fill-opacity="0.5" fill="#800"/>
+        <rect transform="rotate(45 90,90)" height="52" width="52" y="64" x="64" fill-opacity="0.5" fill="#080"/>
+        <rect transform="rotate(45 130,50)" height="52" width="52" y="24" x="104" fill-opacity="0.5" fill="#008"/>
+        <rect transform="rotate(45 210,50)" height="52" width="52" y="24" x="184" fill-opacity="0.5" fill="#008"/>
+        <line x1="132" y1="88" x2="168" y2="52" stroke-width="5" stroke="#008" stroke-opacity="0.5" />
+        <line x1="132" y1="92" x2="168" y2="128" stroke-width="5" stroke="#008" stroke-opacity="0.5" />
+        <line x1="172" y1="52" x2="208" y2="88" stroke-width="5" stroke="#008" stroke-opacity="0.5" />
+        <rect transform="rotate(45 170,90)" height="52" width="52" y="64" x="144" fill-opacity="0.5" fill="#008"/>
+        <rect transform="rotate(45 130,130)" height="52" width="52" y="104" x="104" fill-opacity="0.5" fill="#008"/>
+    </g>
+</svg>

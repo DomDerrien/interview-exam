@@ -1,0 +1,18 @@
+<svg width="151" height="151" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <line stroke="#000" x1="1" y1="1" x2="152" y2="1" stroke-width="2" />
+        <line stroke="#000" x1="0" y1="50" x2="152" y2="50" stroke-width="2" />
+        <line stroke="#000" x1="0" y1="100" x2="152" y2="100" stroke-width="2" />
+        <line stroke="#000" x1="0" y1="150" x2="152" y2="150" stroke-width="2" />
+        <line stroke="#000" x1="1" y1="1" x2="1" y2="152" stroke-width="2" />
+        <line stroke="#000" x1="50" y1="0" x2="50" y2="152" stroke-width="2" />
+        <line stroke="#000" x1="100" y1="0" x2="100" y2="152" stroke-width="2" />
+        <line stroke="#000" x1="150" y1="0" x2="150" y2="152" stroke-width="2" />
+        <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" x="70" x0="75-05" y="30" y0="25+5" stroke-width="0" fill="#000">a</text>
+        <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" x="120" x0="125-05" y="30" y0="25+5" stroke-width="0" fill="#000">b</text>
+        <text xml:space="preserve" text-anchor="start" font-family="Helvetica, Arial, sans-serif" font-size="24" x="120" x0="125-05" y="80" y0="75+5" stroke-width="0" fill="#000">c</text>
+        <line stroke="#00f" x1="50" y1="100" x2="100" y2="50" stroke-width="2" />
+        <line x1="85" y1="55" x2="95" y2="55" stroke-width="1.5" stroke="#080" />
+        <line x1="95" y1="65" x2="95" y2="55" stroke-width="1.5" stroke="#080" />
+    </g>
+</svg>

@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Coding test</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <style>
+        body {
+            color: black;
+            background-color: white;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .exercise {
+            display: block;
+            margin: 10px;
+            border-spacing: 0;
+            border-collapse: collapse;
+            background-color: transparent;
+        }
+        
+        .exercise td {
+            width: 40px;
+            height: 40px;
+            font-size: 8px;
+            color: transparent;
+            vertical-align: top;
+            border: 1px #eee solid;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 100% 100%, auto;
+        }
+        
+        .exercise td.isLeft {
+            color: black;
+            text-align: right;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M1 0 L0 1 L99 100 L100 99' fill='black' /></svg>");
+        }
+        
+        .exercise td.isRight {
+            color: black;
+            text-align: left;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' version='1.1' preserveAspectRatio='none' viewBox='0 0 100 100'><path d='M0 99 L99 0 L100 1 L1 100' fill='black' /></svg>");
+        }
+
+    </style>
+</head>
+
+<body style="display:flex; flex-wrap: wrap;">
+    <table id="problem" class="exercise" cellpadding="0" cellspacing="0">
+        <caption>Initial pattern</caption>
+    </table>
+
+    <script type="module">
+        import Grid from './lib/Grid.js';
+
+        (function(w, d) {
+            'use strict';
+
+            function drawGrid(grid) {
+                let tableNode = d.getElementById('problem');
+
+                for (let i = 0; i < grid.height; i += 1) {
+                    let rowNode = d.createElement('tr');
+                    rowNode.id = 'r' + i;
+                    for (let j = 0; j < grid.width; j += 1) {
+                        let cellNode = d.createElement('td');
+                        cellNode.className = grid.get(j, i).isRight ? 'isRight' : 'isLeft';
+                        cellNode.appendChild(d.createTextNode(j + ', ' + i));
+                        rowNode.appendChild(cellNode);
+                    }
+                    tableNode.appendChild(rowNode);
+                }
+            }
+
+            function drawPath(grid, path, idx) {
+                let tableNode = d.createElement('table');
+
+                for (let i = 0; i < grid.height; i += 1) {
+                    let rowNode = d.createElement('tr');
+                    rowNode.id = 'r' + i;
+                    for (let j = 0; j < grid.width; j += 1) {
+                        let cellNode = d.createElement('td');
+                        cellNode.id = 'c' + idx + '-' + i + '-' + j;
+                        cellNode.appendChild(d.createTextNode(j + ', ' + i));
+                        rowNode.appendChild(cellNode);
+                    }
+                    tableNode.appendChild(rowNode);
+                }
+
+                tableNode.id = 't' + idx;
+                tableNode.className = 'exercise';
+                tableNode.cellSpacing = '0';
+                tableNode.cellPadding = '0';
+                d.getElementsByTagName('body')[0].appendChild(tableNode);
+
+                for (let i = 0; i < path.length; i += 1) {
+                    let cell = path[i];
+                    let cellNode = d.getElementById('c' + idx + '-' + cell.j + '-' + cell.i);
+                    cellNode.className = path[i].isRight ? 'isRight' : 'isLeft';
+                }
+            }
+            
+            function printAreaSize(grid, idx) {
+                let units = 0;
+
+                for (let i = 0; i < grid.height; i += 1) {
+                    let inside = false;
+                    for (let j = 0; j < grid.width; j += 1) {
+                        let cellNode = d.getElementById('c' + idx + '-' + i + '-' + j);
+                        if (cellNode.className === '') {
+                            units += inside ? 2 : 0;
+                        }
+                        else {
+                            inside = !inside;
+                            units += 1;
+                        }
+                    }
+                }
+
+                let captionNode = d.createElement('caption');
+                captionNode.appendChild(d.createTextNode('Area size: ' + (units / 2) + 'u'));
+                d.getElementById('t' + idx).appendChild(captionNode);
+
+                return units / 2;
+            }
+
+            function main() {
+                let width,
+                    height;
+
+                const params = window.location.search;
+                if (3 < params.length) {
+                    let timesIdx = params.indexOf('x');
+                    width = parseInt(params.substr(1, timesIdx - 1));
+                    height = parseInt(params.substr(timesIdx + 1));
+                }
+
+                let grid = new Grid(width, height);
+                drawGrid(grid);
+
+                let closedPaths = grid.getClosedPaths();
+                for (let i = 0; i < closedPaths.length; i += 1) {
+                    drawPath(grid, closedPaths[i], i);
+                    printAreaSize(grid, i);
+                }
+            }
+
+            main();
+        })(window, document);
+
+    </script>
+
+</body>
+
+</html>
