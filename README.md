@@ -5,7 +5,7 @@ It proposes a valid implementation and its unit test series.
 As such it goes beyond what's effectively asked. 
 
 The push of a solution on a public repository to fuel discussions with the interviewers.
-To anyone insterested, feel free to propose updates with a push request.
+To anyone interested, feel free to propose updates with a push request.
 
 - Exam
  - Warning
@@ -25,7 +25,7 @@ Test Algo FE Senior (english) -  1h
 
 Please note that we do not require a complete working solution in such a short timeframe.
 
-The goal of this test is to see your firsts steps on resolving this test; how you analyse the problem, how you organize your ideas and what are the first steps you take to propose a working solution.
+The goal of this test is to see your first steps on resolving this test; how you analyze the problem, how you organize your ideas, and what are the first steps you take to propose a working solution.
  
 ## Context
 
@@ -33,13 +33,11 @@ The goal of this test is to see your firsts steps on resolving this test; how yo
 
 We consider a set of squares arranged in grid, measuring _iMax_ in width and _jMax_ in height. 
 
-Then we compose a maze by using one (and only one) diagonal for each square. Each square  side measures 1 unit, therefore the diagonal length is <img src="docs/sqrt2.svg" style="height:16px;margin-bottom:-2px;"/>.
+Then we compose a maze by using one (and only one) diagonal in each square. Each square  side measures 1 unit, therefore the diagonal length is <img src="docs/sqrt2.svg" style="height:16px;margin-bottom:-2px;"/> square units.
 
-We do use exactly one diagonal for each square. 
+When following connected diagonals, some paths produce fuly closed areas, others produce open ones (no way to reach an already followed diagonal).
 
-The set of these diagonals is use to make groups, or sets. Some sets are closed, other are opened (opened means connected to the 'outside' of the grid).
-
-In this example picture, the given grid has at least 3 closed sets, which areas are 2, 2 and 8. Other sets (not colored) are opened.
+In this example picture, the given grid has at least 3 closed areas, which areas are 2, 2, and 8 square units. Other areas (not colored) are opened.
 
 <p style="text-align: center">
     <img src="docs/objective.svg" width="33%"/>
@@ -49,8 +47,8 @@ In this example picture, the given grid has at least 3 closed sets, which areas 
 
 Your goal is to propose, for any given grid following the description above, a method to find:
 
-- the number of closed sets
-- the area of the largest closed set
+- the number of closed areas
+- the size of the largest closed area
 
 Suggest one (or several) algorithm(s) to address this problem in a game.
 
@@ -62,7 +60,7 @@ Suggest one (or several) algorithm(s) to address this problem in a game.
 
 Definitions :
 
-- A cell is part of a closed path if there is a path starting from this cell and coming back to it in the same direction wuthout having ever reached one of the cells belonging to this path.
+- A cell is part of a closed path if there is a path starting from this cell and coming back to it in the same direction without having ever reached one of the cells belonging to this path.
 - A cell with a diagonal oriented to the right (resp. to the left) is qualified `toRight` (resp. `toLeft`).
 - A cell with a diagonal followed in the right or bottom direction is qualified with `progression = true` (simple progression). Other directions give the qualification `progression - false` (simple regression).
 
@@ -132,7 +130,7 @@ Not implemented.
 
 In the current implementation, all closed paths are reported.
 
-## Area computation
+## Surface computation
 
 When a closed path is represented alone in the grid, it's easy to compute the area:
 
@@ -145,11 +143,11 @@ When a closed path is represented alone in the grid, it's easy to compute the ar
     <img src="docs/area.svg" />
 </div>
 
-The smallest area is composed of four adjacent triangles for a total of two units.
+The smallest surface is composed of four adjacent triangles for a total of two square units.
 
 # Solution implementation
 
-The solution can be exercized by opening the [index.html](https://rawgit.com/DomDerrien/interview-exam/master/index.html) file in Chrome, Opera, or Safari.
+The solution can be exercized by opening the [index.html](https://rawgit.com/DomDerrien/interview-exam/master/index.html) file in all modern browsers.
 For now, only these browsers have implemented the EcmaScript 6 `import` statement.
 The level of support of other browsers can be checked on [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) website.
 
